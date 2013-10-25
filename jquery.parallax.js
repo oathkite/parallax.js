@@ -6,8 +6,8 @@
 			var startY = self.offset().top;
 			var startX = self.offset().left;
 			$(window).on('scroll', function(e) {
-				var scrollY = startY - $(window).scrollTop();
-				var scrollX = startX - $(window).scrollLeft();
+				var scrollY = $(window).scrollTop();
+				var scrollX = $(window).scrollLeft();
 				self.css({
 					top: startY + scrollY * ratio / self.data('depth'),
 					left: startX + scrollX * ratio / self.data('depth')
